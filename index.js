@@ -1,4 +1,4 @@
-<script>
+
     function slideLeft() {
       document.getElementById('slider').scrollBy({
         left: -220,
@@ -103,4 +103,3 @@
 
     });
 
- </script>
