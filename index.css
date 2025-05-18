@@ -1,0 +1,613 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  #image {
+    filter: brightness(0.4);
+    object-fit: cover;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50x;
+  }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    font-size: 3em;
+    color: #e50914;
+    font-weight: bold;
+  }
+
+  .language-signin {
+    position: absolute;
+    top: 20px;
+    right: 150px;
+  }
+
+  #size {
+    font-size: 17px;
+    width: 120px;
+    padding: 3px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+  }
+
+  .btn {
+    background-color: #e50914;
+    color: white;
+    padding: 6px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .main-content {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: white;
+    margin-left: 60vh;
+  }
+
+  #Unlimited {
+    font-size: 3.5rem;
+    font-weight: bold;
+
+  }
+
+  .main-content h3 {
+    font-weight: bold;
+    margin-top: -4vh;
+    font-size: 20px;
+
+  }
+
+  .main-content p {
+    font-size: 20px;
+    margin-top: 5vh;
+  }
+
+  .email-form {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  input[type="email"] {
+    width: 70%;
+    padding: 2px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+  }
+
+  .btn1 {
+    width: 150px;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #e50914;
+    color: white;
+    margin-left: 10px;
+    border: none;
+  }
+
+  .trend h1 {
+    font-size: 23px;
+    margin-left: 20vh;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.3s ease;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .box h1 {
+    margin-right: 30vh;
+    z-index: 100px;
+  }
+
+  .box {
+    min-height: 200px;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: white;
+    transition: 0.5s;
+    border: none;
+    position: relative;
+  }
+
+  .box:hover {
+    transform: scale(1.1);
+    z-index: 999;
+  }
+
+  .box img {
+    text-align: center;
+    background-position: center;
+    border-radius: 10px;
+    width: 200px;
+  }
+
+
+  .slider-btn {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .slider-btn.left {
+    margin-right: 10px;
+  }
+
+  .slider-btn.right {
+    margin-left: 10px;
+  }
+
+  .more-reason-to-join {
+    color: white;
+    margin-left: 19vh;
+    font-size: 11px;
+    margin-top: 10vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .reason {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+  }
+
+  .box-re {
+    height: 300px;
+    min-width: 250px;
+    color: white;
+    background-color: #182952;
+    background: linear-gradient(to bottom, #001F3F, #4C5F7A);
+    border-radius: 10px;
+  }
+
+  .box-re h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .box-re,
+  h4 {
+    color: lightslategray;
+    font-size: 16px;
+    margin-left: 2vh;
+    font-weight: bold;
+  }
+
+  #icon-comp {
+    font-size: 3rem;
+    float: right;
+    margin-right: 3vh;
+    margin-top: 10vh;
+    color: white;
+  }
+
+  #icon-comp1 {
+    font-size: 3rem;
+    float: right;
+    margin-right: 3vh;
+    margin-top: 3vh;
+    color: white;
+  }
+
+  .questions {
+    color: white;
+    font-size: 13px;
+    margin-left: 20vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10vh;
+  }
+
+  .whatisnetflix {
+    width: 1100px;
+    border: 1px solid gray;
+    margin-left: 20vh;
+    color: white;
+    background-color: #1E201E;
+    border: none;
+    padding: 5px;
+    padding-left: 4vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .whatisnetflix:hover {
+    background-color: #697565;
+  }
+
+  #plusicon {
+    font-size: 2rem;
+    margin-top: 3vh;
+    margin-right: 3vh;
+  }
+
+  .answer {
+    width: 1100px;
+    margin-left: 20vh;
+    color: white;
+    font-weight: bold;
+    padding-left: 5vh;
+    background-color: #1E201E;
+    padding: 10px;
+    border-top: 1px solid gray;
+    display: none;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .whatisnetflix2 {
+    margin-top: 1vh;
+    width: 1100px;
+    border: 1px solid gray;
+    margin-left: 20vh;
+    font-size: 12px;
+    color: white;
+    background-color: #1E201E;
+    border: none;
+    padding: 5px;
+    padding-left: 4vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .whatisnetflix2:hover {
+    background-color: #697565;
+  }
+
+  #plusicon2 {
+    font-size: 2rem;
+    margin-top: 3vh;
+    margin-right: 3vh;
+  }
+
+  #plusicon3 {
+    font-size: 2rem;
+    margin-top: 3vh;
+    margin-right: 3vh;
+  }
+
+  #plusicon4 {
+    font-size: 2rem;
+    margin-top: 3vh;
+    margin-right: 3vh;
+  }
+
+  #plusicon5 {
+    font-size: 2rem;
+    margin-top: 3vh;
+    margin-right: 3vh;
+  }
+
+  #plusicon6 {
+    font-size: 2rem;
+    margin-top: 3vh;
+    margin-right: 3vh;
+  }
+
+  .membership h3 {
+    color: white;
+    text-align: center;
+    margin-top: 12vh;
+  }
+
+  input[type="email2"] {
+    background-color: black;
+    border: 1px solid gray;
+    width: 40%;
+    padding-left: 15px;
+  }
+
+  .custom-input {
+    height: 50px;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .custom-input::placeholder {
+    font-size: 18px;
+    color: #999;
+  }
+
+
+
+  .footer {
+    padding: 40px 60px;
+    background: #000;
+    font-size: 14px;
+    margin-left: 15vh;
+  }
+
+  .footer a {
+    color:  #757575;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-top {
+    margin-bottom: 30px;
+  }
+
+  .footer-top p {
+    color: gray;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 30px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px 20px 0;
+    min-width: 150px;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-lang select {
+    background: transparent;
+    color: #757575 ;
+    border: 1px solid #757575;
+    padding: 6px 10px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    color:#757575 ;
+  }
+
+  .captcha-note {
+    margin-top: 10px;
+    color: #757575;
+  }
+
+  .pop-up {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    right: 25%;
+    display: none;
+    background-color: white;
+    z-index: 9999;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, gray, black);
+  }
+
+  #wrongicon {
+    font-size: 40px;
+    margin-right: 3vh;
+    position: absolute;
+    left: 92%;
+    z-index: 10;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pop-up img {
+    margin-top: -1vh;
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+  }
+
+  .all {
+    margin-left: 5vh;
+  }
+
+  #btn {
+    margin-top: 2vh;
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    border: none;
+  }
+
+  .dec {
+    margin-left: 5vh;
+    margin-top: 2vh;
+    color: white;
+    font-size: 15px;
+  }
+
+  #pop-btn {
+    margin-left: 5vh;
+  }
+  .pop-up a{
+    text-decoration: none
+  }
+
+  @media only screen and (max-width: 480px) {
+    .logo {
+      font-size: 30px;
+      position: absolute;
+      left: 3%;
+      color: red;
+    }
+
+    .language-signin {
+      display: flex;
+      position: absolute;
+      left: 55%;
+    }
+
+    #size {
+      font-size: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    #btn-sig {
+      min-width: 80px;
+    }
+
+    #main {
+      position: absolute;
+      top: 20%;
+      margin-left: 5px;
+    }
+
+    #Unlimited {
+      font-size: 30px;
+    }
+
+    .main-content h3 {
+      margin-top: 1vh;
+    }
+
+    .main-content p {
+      margin-top: -1vh;
+      font-size: 18px;
+    }
+
+    .email-form {
+      flex-wrap: wrap;
+    }
+
+    input[type="email"] {
+      width: 350px;
+    }
+
+    .btn1 {
+      margin-top: 2vh;
+    }
+    #image{
+      height: 550px;
+    }
+    .trend h1{
+      
+      margin-left: 2vh;
+    }
+    .slider-btn{
+      height: 120px;
+      width: 20px;
+      border-radius: 10px;
+    }
+    .slider-container{
+       overflow: hidden;
+    }
+    .more-reason-to-join h1{
+      margin-left: -18vh;
+    }
+    .reason{
+      flex-direction: column;
+    }
+    #whatisnetflixcenter{
+      margin-left: 0vh;
+      width: 400px;
+    }
+    .answer{
+      margin-left: 0vh;
+      width: 406px;
+    }
+    #ques11{
+      margin-left: -11vh;
+  
+    }
+    #form1{
+      display: flex;
+      flex-direction: column;
+    }
+    input[type = "email2"]{
+      width: 400px;
+    }
+    .btn1{
+      margin-left: 0vh;
+    }
+    .membership h3{
+      font-size: 20px;
+      text-align: left;
+      
+    }
+    .footer-top p{
+      font-size: 20px;
+      margin-top: 8vh;
+    }
+    .footer {
+       margin-left: 0vh;
+       padding: 0px;
+    }
+    .footer-links{
+        flex-direction: column;
+        gap: 0px;
+        font-size: 20px;
+        color: white;
+    }
+    .footer a{
+      color: light gainsboro;
+    }
+
+    .pop-up{
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: 0;
+      z-index: 9999;
+      border: 1px solid gray;
+    }
+    #pop-img{
+      border: 1px solid gray;
+    }
+    
+
+  }
+</style>
